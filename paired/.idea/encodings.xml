@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/PairedAppCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/PairedAppCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/browse.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/pairedApp.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/playlist.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/search.html" charset="UTF-8" />
+  </component>
+</project>
