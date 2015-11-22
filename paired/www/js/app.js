@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','pairedModule'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -40,6 +40,55 @@ angular.module('starter', ['ionic', 'starter.controllers','pairedModule'])
       }
     }
   })
+
+  .state('app.wbtag', {
+      url: '/wbtag',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/wbtag.html',
+          controller: 'WbTagCtrl as wbTag'
+        }
+      }
+    })
+
+  .state('app.wbtagstep1', {
+        url: '/wbtagstep1',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/wbtagstep1.html?r='+Math.random(),
+            controller: 'WbTagStep1Ctrl as wbtagstep1'
+          }
+        }
+      })
+
+  .state('app.wbtagstep2', {
+          url: '/wbtagstep2',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/wbtagstep2.html',
+              controller: 'WbTagStep2Ctrl as wbtagstep2'
+            }
+          }
+        })
+
+   .state('app.wbtagstep3', {
+             url: '/wbtagstep3',
+             views: {
+               'menuContent': {
+                 templateUrl: 'templates/wbtagstep3.html?r='+Math.random(),
+                 controller: 'WbTagStep3Ctrl as wbtagstep3'
+               }
+             }
+           })
+
+  .state('app.wbbrowse', {
+        url: '/wbbrowse',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/wbbrowse.html'
+          }
+        }
+      })
 
   .state('app.browse', {
       url: '/browse',
@@ -77,7 +126,7 @@ angular.module('starter', ['ionic', 'starter.controllers','pairedModule'])
         url: '/paired',
         views: {
           'menuContent': {
-            templateUrl: 'templates/pairedApp.html',
+            templateUrl: 'templates/pairedApp.html?r='+Math.random(),
             controller: 'PairedAppCtrl'
           }
         },onEnter: function(){
@@ -87,5 +136,5 @@ angular.module('starter', ['ionic', 'starter.controllers','pairedModule'])
                         }
       });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/paired');
+  $urlRouterProvider.otherwise('/app/paired?r='+Math.random());
 });

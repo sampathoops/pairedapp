@@ -3537,7 +3537,7 @@ ion-infinite-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: #fff;
   overflow: hidden; }
 
 .view-container {
@@ -3862,8 +3862,8 @@ a.subdued {
   height: 60px;
   border-width: 0;
   border-style: solid;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid #ddd;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid #ddd;
   background-color: white;
   /* border-width: 1px will actually create 2 device pixels on retina */
   /* this nifty trick sets an actual 1px border on hi-res displays */
@@ -3901,7 +3901,7 @@ a.subdued {
       background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%); }
   .bar.bar-stable {
     border-color: #b2b2b2;
-    background-color:transparent;
+    background-color: #f8f8f8;
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
     .bar.bar-stable .title {
@@ -4102,7 +4102,7 @@ a.subdued {
 
 .bar-stable .button {
   border-color: #b2b2b2;
-  background-color:transparent;
+  background-color: #f8f8f8;
   color: #444; }
   .bar-stable .button:hover {
     color: #444;
@@ -4279,7 +4279,7 @@ a.subdued {
 .bar-header {
   top: 0;
   border-top-width: 0;
-  border-bottom-width: 1px; }
+  border-bottom-width: 0px; }
   .bar-header.has-tabs-top {
     border-bottom-width: 0px;
     background-image: none; }
@@ -4290,7 +4290,7 @@ a.subdued {
 
 .bar-footer {
   bottom: 0;
-  border-top-width: 1px;
+  border-top-width: 0px;
   border-bottom-width: 0;
   background-position: top;
   height: 44px; }
@@ -4350,7 +4350,7 @@ a.subdued {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   border-color: #b2b2b2;
-  background-color:transparent;
+  background-color: #f8f8f8;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
   color: #444;
   position: absolute;
@@ -4359,7 +4359,7 @@ a.subdued {
   width: 100%;
   height: 49px;
   border-style: solid;
-  border-top-width: 1px;
+  border-top-width: 0px;
   background-size: 0;
   line-height: 49px; }
   .tabs .tab-item .badge {
@@ -4389,7 +4389,7 @@ a.subdued {
 .tabs-stable > .tabs,
 .tabs.tabs-stable {
   border-color: #b2b2b2;
-  background-color:transparent;
+  background-color: #f8f8f8;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
   color: #444; }
   .tabs-stable > .tabs .tab-item .badge,
@@ -4478,7 +4478,7 @@ a.subdued {
   background-color: white;
   background-image: none;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0px solid #ddd;
   padding-top: 2px; }
 
 .tabs-striped .tab-item.tab-item-active,
@@ -4508,7 +4508,7 @@ a.subdued {
     margin-top: -2px;
     color: #444;
     border-style: solid;
-    border-width: 2px 0 0 0;
+    border-width: 0px 0 0 0;
     border-color: #444; }
 
 .tabs-striped.tabs-top .tab-item.tab-item-active .badge,
@@ -4517,7 +4517,7 @@ a.subdued {
   top: 4%; }
 
 .tabs-striped.tabs-stable .tabs {
-  background-color:transparent; }
+  background-color: #f8f8f8; }
 
 .tabs-striped.tabs-stable .tab-item {
   color: rgba(68, 68, 68, 0.4);
@@ -4530,7 +4530,7 @@ a.subdued {
     margin-top: -2px;
     color: #444;
     border-style: solid;
-    border-width: 2px 0 0 0;
+    border-width: 0px 0 0 0;
     border-color: #444; }
 
 .tabs-striped.tabs-top .tab-item.tab-item-active .badge,
@@ -4552,7 +4552,7 @@ a.subdued {
     margin-top: -2px;
     color: #fff;
     border-style: solid;
-    border-width: 2px 0 0 0;
+    border-width: 0px 0 0 0;
     border-color: #fff; }
 
 .tabs-striped.tabs-top .tab-item.tab-item-active .badge,
@@ -4697,7 +4697,7 @@ a.subdued {
   background-image: none; }
 
 .tabs-striped.tabs-background-stable .tabs {
-  background-color:transparent;
+  background-color: #f8f8f8;
   background-image: none; }
 
 .tabs-striped.tabs-background-positive .tabs {
@@ -4898,7 +4898,7 @@ a.subdued {
 
 .tabs-background-stable .tabs,
 .tabs-background-stable > .tabs {
-  background-color:transparent;
+  background-color: #f8f8f8;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
   border-color: #b2b2b2; }
 
@@ -5852,7 +5852,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     color: #444; }
   .item.item-stable {
     border-color: #b2b2b2;
-    background-color:transparent;
+    background-color: #f8f8f8;
     color: #444; }
   .item.item-positive {
     border-color: #0c60ee;
@@ -6066,7 +6066,7 @@ a.item-content {
 
 .item-complex.item-stable > .item-content {
   border-color: #b2b2b2;
-  background-color:transparent;
+  background-color: #f8f8f8;
   color: #444; }
   .item-complex.item-stable > .item-content.active, .item-complex.item-stable > .item-content:active {
     border-color: #a2a2a2;
@@ -6722,7 +6722,7 @@ button.item.item-button-right {
 
 .tabs .tab-item .badge.badge-stable,
 .badge.badge-stable {
-  background-color:transparent;
+  background-color: #f8f8f8;
   color: #444; }
 
 .tabs .tab-item .badge.badge-positive,
@@ -7313,7 +7313,7 @@ textarea[disabled],
 input[readonly]:not(.cloned-text-input),
 textarea[readonly]:not(.cloned-text-input),
 select[readonly] {
-  background-color:transparent;
+  background-color: #f8f8f8;
   cursor: not-allowed; }
 
 input[type="radio"][disabled],
@@ -8043,7 +8043,7 @@ progress {
  */
 .button {
   border-color: #b2b2b2;
-  background-color:transparent;
+  background-color: #f8f8f8;
   color: #444;
   position: relative;
   display: inline-block;
@@ -8130,7 +8130,7 @@ progress {
         color: #fff; }
   .button.button-stable {
     border-color: #b2b2b2;
-    background-color:transparent;
+    background-color: #f8f8f8;
     color: #444; }
     .button.button-stable:hover {
       color: #444;
@@ -8980,7 +8980,7 @@ a.button {
   color: #f8f8f8; }
 
 .stable-bg {
-  background-color:transparent; }
+  background-color: #f8f8f8; }
 
 .stable-border {
   border-color: #b2b2b2; }

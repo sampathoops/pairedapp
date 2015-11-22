@@ -8009,14 +8009,14 @@ ionic.scroll = {
       this.setWidth(opts.width);
     },
     getFullWidth: function() {
-      return this.width;
+      return 0;
     },
     setWidth: function(width) {
       this.width = width;
-      this.el.style.width = width + 'px';
+      this.el.style.width = '0px';
     },
     setIsEnabled: function(isEnabled) {
-      this.isEnabled = isEnabled;
+      this.isEnabled = false;
     },
     bringUp: function() {
       if(this.el.style.zIndex !== '0') {
@@ -50977,12 +50977,12 @@ function($scope, $element, $attrs, $q, $ionicConfig, $ionicHistory) {
 
 
   self.title = function(newTitleText) {
-    if (arguments.length && newTitleText !== titleText) {
+    /*if (arguments.length && newTitleText !== titleText) {
       getEle(TITLE).innerHTML = newTitleText;
       titleText = newTitleText;
       titleTextWidth = 0;
-    }
-    return titleText;
+    }*/
+    return '';
   };
 
 
@@ -51598,7 +51598,7 @@ function($scope, $element, $attrs, $compile, $timeout, $ionicNavBarDelegate, $io
     ionic.DomUtil.cachedAttr($element, 'nav-bar-transition', $ionicConfig.views.transition());
 
     // create two nav bar blocks which will trade out which one is shown
-    self.createHeaderBar(false);
+    //self.createHeaderBar(false);
     self.createHeaderBar(true);
 
     $scope.$emit('ionNavBar.init', delegateHandle);
@@ -51613,7 +51613,7 @@ function($scope, $element, $attrs, $compile, $timeout, $ionicNavBarDelegate, $io
     var headerBarEle = jqLite('<ion-header-bar>').addClass($attrs['class']).attr('align-title', alignTitle);
     if (isDefined($attrs.noTapScroll)) headerBarEle.attr('no-tap-scroll', $attrs.noTapScroll);
     //var titleEle = jqLite('<div class="title title-' + alignTitle + '">');
-    var titleEle = jqLite('<ul class="tabs  primary-nav"><li class="tabs__item"><a href="#" class="tabs__link">Shop</a></li><li class="tabs__item"><a href="#" class="tabs__link tabsactive">Wardrobe</a></li></ul>');
+    var titleEle = jqLite('<ol class="tabs  primary-nav" style="border-top:0px !important"><li onclick="document.getElementById(\'tabwb\').classList.remove(\'tabsactive\');document.getElementById(\'tabshop\').className += \' tabsactive\'" class="tabs__item"><a href="#" id="tabshop" class="tabs__link" style="padding-top:12px !important"><img src="/android_asset/www/img/logo-small.png" style="top: 13px;float: left;position: relative;"><img width="21px" height="25px" src="/android_asset/www/img/icon-shop.png" style="top: 10px;float: left;left:32px;position: relative;">Shop</a></li><li onclick="document.getElementById(\'tabshop\').classList.remove(\'tabsactive\');document.getElementById(\'tabwb\').className += \' tabsactive\'" class="tabs__item" style="padding-top:12px !important"><a href="#" id="tabwb" class="tabs__link tabsactive" ><img width="30px" height="22px" src="/android_asset/www/img/icon-wb.png" style="top: 10px;float: left;left:28px;position: relative;">Wardrobe</a></li></ol>');
 
     var navEle = {};
     var lastViewItemEle = {};
@@ -51624,7 +51624,7 @@ function($scope, $element, $attrs, $compile, $timeout, $ionicNavBarDelegate, $io
 
     // append title in the header, this is the rock to where buttons append
     headerBarEle.append(titleEle);
-
+    console.log('headerBarEle',headerBarEle);
     forEach(ITEM_TYPES, function(itemType) {
       // create default button elements
       navEle[itemType] = createNavElement(itemType);
@@ -51636,6 +51636,8 @@ function($scope, $element, $attrs, $compile, $timeout, $ionicNavBarDelegate, $io
     for (var x = 0; x < headerBarEle[0].children.length; x++) {
       headerBarEle[0].children[x].classList.add('header-item');
     }
+
+    headerBarEle[0].style.borderStyle = 'none';
 
     // compile header and append to the DOM
     containerEle.append(headerBarEle);
@@ -53147,7 +53149,7 @@ function($scope, $attrs, $ionicSideMenuDelegate, $ionicPlatform, $ionicBody, $io
    * Toggle the left menu to open 100%
    */
   self.toggleLeft = function(shouldOpen) {
-    if (isAsideExposed || !self.left.isEnabled) return;
+    /*if (isAsideExposed || !self.left.isEnabled) return;
     var openAmount = self.getOpenAmount();
     if (arguments.length === 0) {
       shouldOpen = openAmount <= 0;
@@ -53159,7 +53161,7 @@ function($scope, $attrs, $ionicSideMenuDelegate, $ionicPlatform, $ionicBody, $io
     } else {
       self.openPercentage(100);
       $rootScope.$emit('$ionicSideMenuOpen', 'left');
-    }
+    }*/
   };
 
   /**
@@ -59392,6 +59394,7 @@ IonicModule
     controller: '$ionicView',
     compile: function(tElement) {
       tElement.addClass('pane');
+      tElement.addClass('pagebg');
       tElement[0].removeAttribute('title');
       return function link($scope, $element, $attrs, viewCtrl) {
         viewCtrl.init();

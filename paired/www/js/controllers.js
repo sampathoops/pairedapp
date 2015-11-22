@@ -1,5 +1,5 @@
-var appModule = angular.module('starter.controllers',['ionic']);
-var pairedModule = angular.module('pairedModule', ['ionic']);
+var appModule = angular.module('starter.controllers',['ngCordova']);
+
 appModule.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
