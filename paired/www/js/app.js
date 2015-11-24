@@ -76,7 +76,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
              views: {
                'menuContent': {
                  templateUrl: 'templates/wbtagstep3.html?r='+Math.random(),
-                 controller: 'WbTagStep3Ctrl as wbtagstep3'
+                 controller: 'WbTagStep3Ctrl'
                }
              }
            })
