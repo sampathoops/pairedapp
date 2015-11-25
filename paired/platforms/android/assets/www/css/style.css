@@ -1,0 +1,232 @@
+/*hide hamburger menu and back text*/
+.buttons-left{
+display:none !important;
+}
+.back-text{
+display:none !important;
+}
+
+body{
+font-family:Exo-Thin;font-size:15px;
+}
+
+h1{
+font-size: 18px;
+font-family: Exo-Thin;
+color:#ffffff;
+text-align:center;
+}
+.uscore{
+text-align:center;
+margin-left: 45%;
+top: -14px;
+position: relative;
+}
+
+@font-face {
+  font-family: "KaushanScript";
+  src: url("../fonts/KaushanScript.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+
+@font-face {
+  font-family: "Exo-Thin";
+  src: url("../fonts/Exo-Thin.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+
+@font-face {
+    font-family: "Exo-Medium";
+    src: url("../fonts/Exo-Medium.otf");
+    font-weight: normal;
+    font-style: normal; }
+
+/*tabs css*/
+.tabs{min-height:60px;margin:0;padding:0;list-style:none;display:table;table-layout:fixed;width:100%;background-color:transparent !important;}.tabs__item{display:table-cell}.tabsactive{background-image: url(../img/gradientbg.png);background-repeat: repeat-x;}.tabs__link{display:block;padding-top:20px;}.primary-nav{text-align:center;overflow:hidden;border-bottom:1px solid #2E2E2E;}.primary-nav a{padding:8px;background-color:none;color:#ffffff;font-weight:700;text-decoration:none}.primary-nav a:hover{background-color:none}
+.nav-bar-block{
+background-color:transparent !important;
+border:none;
+}
+.bar-stable{
+background-color:transparent !important;
+border:none;
+
+background-image: url(../img/gradientbg.png);
+      background-repeat: repeat-x;
+}
+.bar{
+border:none;
+background-image: none !important;
+margin-top:-5px;
+min-height:70px !important;
+padding: 0px !important;
+}
+.has-header {
+    top: 82px !important;
+}
+.pagebg {
+background-image: url(../img/bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      -webkit-transform: translateZ(0);
+      border: none !important;
+}
+ion-header-bar{
+ border: none !important;
+}
+.grade-b .menu-content, .grade-c .menu-content {
+	border-right: 1px solid #777; // or none for that matter
+	border-left: 1px solid #777; // or none for that matter
+}
+.loading {
+    position:absolute;
+    top:50px;
+    left:50px;
+    background-color: rgba(0,0,0,0);
+    border:7px solid rgba(213,213,213,1);
+    opacity:.9;
+    border-top:7px solid rgba(0,0,0,0);
+    border-left:7px solid rgba(0,0,0,0);
+    border-radius:30px;
+    box-shadow: 0 0 15px #ccc;
+    width:50px;
+    height:50px;
+    -webkit-animation:spin .8s infinite linear;
+    z-index:-9;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(360deg); }
+}
+@-webkit-keyframes brillaIniciar {
+    from {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0 0 10px #c5bc9a;
+	}
+	to{
+		box-shadow: none;
+	}
+}
+@-moz-keyframes brillaIniciar {
+    from {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0 0 10px #c5bc9a;
+	}
+	to{
+		box-shadow: none;
+	}
+}
+@-ms-keyframes brillaIniciar {
+    from {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0 0 10px #c5bc9a;
+	}
+	to{
+		box-shadow: none;
+	}
+}
+@-o-keyframes brillaIniciar {
+    from {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0 0 10px #c5bc9a;
+	}
+	to{
+		box-shadow: none;
+		display:none;
+	}
+}
+@keyframes brillaIniciarText {
+    from {
+		text-shadow: none;
+	}
+	50% {
+		text-shadow: 0 0 10px #c5bc9a;
+	}
+	to{
+		text-shadow: none;
+		display:none;
+	}
+}
+@keyframes brillaIniciar {
+    from {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0 0 30px #c5bc9a;
+	}
+	to{
+		box-shadow: none;
+		display:none;
+	}
+}
+p {
+    -webkit-animation-name: brillaIniciarText;
+    -moz-animation-name: brillaIniciarText;
+    -ms-animation-name: brillaIniciarText;
+    -o-animation-name: brillaIniciarText;
+    animation-name: brillaIniciarText;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.mainmsg {
+    -webkit-animation-name: brillaIniciar;
+    -moz-animation-name: brillaIniciar;
+    -ms-animation-name: brillaIniciar;
+    -o-animation-name: brillaIniciar;
+    animation-name: brillaIniciar;
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+    -ms-animation-duration: 1.2s;
+    -o-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.item-complex .item-content, .item-radio .item-content{
+background:#151715;
+color:#ffffff;
+}
+.item{
+border-color:#2d2e2d;
+background:black;
+}
+
+.item-radio .radio-icon {
+color:white;
+background:#151715;
+}
+
+.item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated{
+border-color:#2d2e2d;
+background:#151715;
+color:white;
+}

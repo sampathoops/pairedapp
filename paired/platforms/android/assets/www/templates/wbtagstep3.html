@@ -1,0 +1,44 @@
+<ion-view view-title="Search">
+  <ion-content style="margin-top:-10px;">
+    <ul class="progress-indicator" style="width:100%;margin-top:8px;margin-bottom:15px;">
+      <li class="completed">
+        <span class="bubble"></span>
+        <span style="font-family:Exo-Thin;font-size:15px;font-weight:1000;">Capture</span>
+      </li>
+      <li class="completed">
+        <span class="bubble"></span>
+        <span style="font-family:Exo-Thin;font-size:15px;font-weight:1000;">Select category</span>
+      </li>
+      <li class="completed">
+        <span class="bubble"></span>
+        <span style="font-family:Exo-Thin;font-size:15px;font-weight:1000;">Import</span>
+      </li>
+
+    </ul>
+<div>step3</div>
+
+    <ul  id="wardrobeCanvasContainerUl" style="display:inline;background:#2E2E2E;opacity:0.9;"></ul>
+
+    <div class="cameraPlusPreview row" style="display:inline;top:150px;left:10px;z-index:2;position:absolute;">
+
+              <span>
+                  <img id="tagPreviewImg" class="live-grab" style="width:160px;height:200px;border: 1px solid #2a3038;outline-style: dotted;outline-color: #2a3038;" src="data:image/png;base64,{{jsBuffer.Image}}" imageonload="refreshPreview()">
+              </span>
+
+
+              <span id="tagPreviewContainer" style="display:inline-block;margin-left:-22px;z-index:2;width:40%;height:40%;margin-top:-30px;">
+                  <div id="tagPreviewContainerRow" class="row" style="margin-top:-30px">
+                    <div id="tagPreviewContainerCol" class="col"></div>
+                  </div>
+
+              </span>
+
+      <!--<a href="#" class="s3d bluebtn" style="width:160px;position:relative;left:5px;top:-40px" ng-click="tagWardrobeProduct()"><center>Add</center></a>-->
+    </div>
+
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-assertive" style="bottom:20px;background:transparent;min-height:40px !important;">
+    <a class="button" ng-click="goToTagHome()" style="opacity:0.5;border-radius:0px;font-family: Exo-Thin;font-size:16px;font-weight:1000;width:50%;background:rgba(21,23,21,0.4);;color:white;border-color:#ffffff;border-style:none;border:0px;padding-top:4px;">DONE</a>
+    <a class="button" ng-click="tagProduct()" style="border-radius:0px;opacity:0.8;top:0px;bottom:0px;right:0px;font-family: Exo-Thin;font-size:16px;font-weight:1000;width:50%;background:#151715;color:white;border-color:#ffffff;border-style:none;border 0px;letter-spacing:2px;padding-top:4px;">+ ADD ></a>
+  </ion-footer-bar>
+</ion-view>
