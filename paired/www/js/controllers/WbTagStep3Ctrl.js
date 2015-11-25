@@ -17,7 +17,7 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
                 $scope.selectedCat = sessionStorage.getItem('selectedCat');
                 $scope.selectedCatCallabeName = sessionStorage.getItem('selectedCatCallabeName');
                 $scope.selectedCatId = sessionStorage.getItem('selectedCatId');
-                alert($scope.selectedCatId);
+                //alert($scope.selectedCatId);
           }
 
           $scope.jsBuffer = {
@@ -48,11 +48,11 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
           };
 
           $scope.startCapture = function() {
-            alert('startCapture')
+            //alert('startCapture')
             if ( $scope.cameraPlus ) {
               // call this API to stop web server
               $scope.cameraPlus.startCamera(function(){
-                alert('Capture Started');
+                //alert('Capture Started');
 
                 // already call once to fill the buffer since it's always delayed of 1 frame...
                 $scope.refreshPreview();
@@ -100,8 +100,9 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
           };
 
           $scope.refreshPreview = function () {
-            //console.log("refreshPreview");
-            alert('$scope.formControls.liveRefreshEnabled:'+$scope.formControls.liveRefreshEnabled);
+            //alert("refreshPreview");
+            //alert('$scope.formControls.liveRefreshEnabled:'+$scope.formControls.liveRefreshEnabled);
+
             if ($scope.formControls.liveRefreshEnabled) {
               setTimeout(function () {
                 $scope.$apply(function () {
@@ -228,8 +229,9 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
                 if ($scope.jsBuffer.Image != jpgData)
                 {
                   $scope.jsBuffer.Image = jpgData;
+                  $scope.refreshPreview();
 
-                   document.getElementById('tagPreviewImg').onload = function(e) {
+                   /*document.getElementById('tagPreviewImg').onload = function(e) {
 
                            var crow = document.getElementById("tagPreviewContainerRow");
 
@@ -297,7 +299,7 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
 
                        var direction = 'repeat'; var pat = ctx.createPattern(patternCanvas, direction);
 
-                        alert('drawing');
+                        //alert('drawing');
 
                        //global variable
                        //window.selectedCategory = 'Casual Tops';
@@ -365,7 +367,7 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
                        mqImg.style.zIndex = '10';
 
 
-                    }
+                    }*/
 
                 }
                 else
@@ -378,24 +380,24 @@ angular.module('starter.controllers').controller('WbTagStep3Ctrl',WbTagStep3Ctrl
 
               }, function()
               {
-                  console.log('getImage failed');
+                  alert('getImage failed');
                   reject('getImage failed');
               });
             });
           };
 
            window.ionic.Platform.ready(function() {
-                      alert('Ionic ready... Loading plugins.');
+                      //alert('Ionic ready... Loading plugins.');
 
                       $scope.cameraPlus = ( cordova && cordova.plugins && cordova.plugins.CameraPlus ) ? cordova.plugins.CameraPlus : null;
-                      alert($scope.cameraPlus);
+                      //alert($scope.cameraPlus);
                       $scope.switchCapture(true);
+                                $scope.switchLiveRefresh(true);
+                                //alert('live refresh!');
+                                setTimeout(function(){$scope.getImage();},1000);
                     });
 
-          $scope.switchCapture(true);
-          $scope.switchLiveRefresh(true);
-          alert('live refresh!');
-          setTimeout(function(){$scope.getImage();},1000);
+
 
 
 

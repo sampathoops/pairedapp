@@ -2,6 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/platforms/android/assets/www/templates/pairedApp.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platforms/android/src/com/moonware/cameraplus/CameraManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/com.moonware.cameraplus/src/android/CameraManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/com.moonware.cameraplus/src/android/CameraPlus.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/cordova-plugin-camera/src/android/CameraLauncher.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/cordova-plugin-camera/src/android/ExifHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/cordova-plugin-camera/src/android/FileHelper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
